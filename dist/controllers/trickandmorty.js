@@ -12,12 +12,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getTrickandmortyById = void 0;
+exports.postTrickandmorty = void 0;
 const axios_1 = __importDefault(require("axios"));
 const queries_1 = require("../models/graphQL/queries");
 const graphql = require("graphql");
 const { print } = graphql;
-const getTrickandmortyById = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+const postTrickandmorty = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     var _a;
     let page = req.query.page;
     try {
@@ -40,5 +40,5 @@ const getTrickandmortyById = (req, res) => __awaiter(void 0, void 0, void 0, fun
         res.status(500).json({ msg: "Bad request" });
     }
 });
-exports.getTrickandmortyById = getTrickandmortyById;
+exports.postTrickandmorty = postTrickandmorty;
 //# sourceMappingURL=trickandmorty.js.map
