@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { getTrickandmortyById } from "../controllers/trickandmorty";
+import { postTrickandmorty } from "../controllers/trickandmorty";
 
 const router = Router();
 
-router.post("/", getTrickandmortyById);
+router.post("/", postTrickandmorty);
 
 export default router;

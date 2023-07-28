@@ -5,9 +5,12 @@ const graphql = require("graphql");
 
 const { print } = graphql;
 
-export const getTrickandmortyById = async (req: Request, res: Response) => {
+export const postTrickandmorty = async (req: Request, res: Response) => {
   let page = req.query.page;
+
+
   try {
+
     const { data } = await axios({
       url: process.env.API_URL?.toString(),
       method: req.method,
@@ -22,8 +25,8 @@ export const getTrickandmortyById = async (req: Request, res: Response) => {
     });
 
     res.json(data);
+
   } catch (error) {
-    console.log(error);
     res.status(500).json({ msg: "Bad request" });
   }
 };
