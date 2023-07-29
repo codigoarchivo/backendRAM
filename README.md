@@ -15,4 +15,4 @@ https://documenter.getpostman.com/view/14511301/2s9XxsWcN4
 2. colocal url API_URL
 3. npm install command
 4. npm run dev
-5. node --watch
+5. tsc --watch
